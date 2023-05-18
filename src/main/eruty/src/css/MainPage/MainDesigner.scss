@@ -1,0 +1,261 @@
+//MainDesigner 시작
+.MainDesigner {
+  padding: 50px 0;
+
+  .inner {
+    width: 1300px;
+    margin: 0 auto;
+
+    .designer_content {
+      .tit {
+        margin: 0 0 30px 0;
+
+        h2 {
+          font-size: 18px;
+          font-weight: 700;
+          margin: 0 0 5px 0;
+        }
+
+        span {
+          font-size: 14px;
+          color: #a4a4a4;
+        }
+      }
+      .con_inner {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        ul {
+          flex: 9.5;
+          position: relative;
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 50px;
+
+          li {
+            position: relative;
+            display: flex;
+            gap: 0px;
+            justify-content: space-around;
+            align-items: center;
+            padding: 20px;
+            background: #ddd;
+            border-radius: 55px;
+
+            .number {
+              position: absolute;
+              inset: 0 auto auto 5px;
+              width: 25px;
+              height: 25px;
+              padding: 5px;
+
+              display: flex;
+              align-items: center;
+              justify-content: center;
+
+              background: #97cbd0;
+              font-weight: 500;
+              border-radius: 50%;
+              text-align: center;
+            }
+
+            figure {
+              border-radius: 50%;
+              overflow: hidden;
+              border: 1px solid #333;
+              img {
+                width: 70px;
+
+                object-fit: cover;
+              }
+            }
+
+            .desc {
+              font-size: 13px;
+
+              strong {
+                display: block;
+                font-weight: 500;
+                margin: 0 0 2px 0;
+              }
+
+              .info {
+                display: flex;
+                gap: 5px;
+                margin: 0 0 2px 0;
+
+                .like {
+                  display: flex;
+                  gap: 1px;
+                  align-items: center;
+
+                  button {
+                    border: none;
+                    background: none;
+                  }
+                }
+
+                .follow {
+                  display: flex;
+                  align-items: center;
+                }
+              }
+
+              .port_folio {
+                span {
+                  display: block;
+
+                  a {
+                    display: inline-block;
+                    padding: 2px 5px;
+                    text-align: center;
+                    border: 2px solid #97cbd0;
+                    border-radius: 5px;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .more {
+          flex: 0.5;
+          text-align: right;
+          a {
+            position: relative;
+            &::before {
+              content: "";
+              position: absolute;
+              inset: 50% 7px auto auto;
+              transform: translate(0, -50%) rotate(45deg);
+              padding: 10px;
+              border-right: 2px solid #000;
+              border-top: 2px solid #000;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//MainDesigner 종료
+
+//MainDesigner-pad 시작
+@media (max-width: 1024px) {
+  .MainDesigner {
+    .inner {
+      width: auto;
+      padding: 0 30px;
+
+      .designer_content {
+        width: auto;
+
+        .tit {
+          h2 {
+            font-size: 15px;
+          }
+
+          span {
+            font-size: 13px;
+          }
+        }
+
+        .con_inner {
+          gap: 5px;
+          ul {
+            flex: 9.5;
+            gap: 20px;
+
+            li {
+              padding: 10px;
+              gap: 5px;
+              .desc {
+                font-size: 1.5vw;
+              }
+            }
+          }
+          .more {
+            flex: 0.5;
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+}
+//MainDesigner-pad 종료
+
+//MainDesigner-mobile 시작
+@media (max-width: 768px) {
+  .MainDesigner {
+    .inner {
+      padding: 0 15px;
+
+      .designer_content {
+        width: auto;
+
+        .tit {
+        }
+
+        .con_inner {
+          ul {
+            grid-template-columns: repeat(3, 1fr);
+
+            li {
+              .desc {
+              }
+              &:last-child {
+                display: none;
+              }
+            }
+          }
+        }
+        .more {
+          flex: 0.5;
+          text-align: right;
+          a {
+            position: relative;
+            &::before {
+              content: "";
+              position: absolute;
+              inset: 50% 7px auto auto;
+              transform: translate(0, -50%) rotate(45deg);
+              padding: 10px;
+              border-right: 2px solid #000;
+              border-top: 2px solid #000;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 580px) {
+  .MainDesigner {
+    .inner {
+      padding: 0 15px;
+
+      .designer_content {
+        width: auto;
+
+        .tit {
+        }
+
+        .con_inner {
+          ul {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            li {
+              .desc {
+              }
+              &:last-child {
+                display: flex;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+//MainDesigner-mobile 종료

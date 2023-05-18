@@ -1,0 +1,105 @@
+// MainService 시작
+.MainService {
+  background: rgb(204 204 204 / 40%);
+  .inner {
+    width: 1300px;
+    margin: 0 auto;
+    .service_content {
+      display: flex;
+      justify-content: center;
+      padding: 50px 40px;
+
+      ul {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 100px;
+
+        li {
+          .service_info {
+            margin: 0 0 20px 0;
+
+            h3 {
+              font-size: 14px;
+              font-weight: 700;
+              margin: 0 0 10px 0;
+            }
+
+            p {
+              font-size: 13px;
+              color: #a4a4a4;
+              margin: 0 0 5px 0;
+              line-height: 1.3;
+            }
+
+            span {
+              font-size: 13px;
+              color: #a4a4a4;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// MainService 종료
+
+// MainService-pad 시작
+@media (max-width: 1024px) {
+  .MainService {
+    .inner {
+      width: auto;
+      padding: 0 30px;
+      .service_content {
+        padding: 50px 80px;
+
+        ul {
+          gap: 25px;
+
+          li {
+            .service_info {
+              h3 {
+                font-size: 1.7vw;
+              }
+
+              p {
+                font-size: 1.4vw;
+              }
+
+              span {
+                font-size: 1.4vw;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// MainService-pad 종료
+
+// MainService-mobile 시작
+@media (max-width: 768px) {
+  .MainService {
+    .inner {
+      padding: 0 15px;
+      .service_content {
+        padding: 50px 20px;
+
+        ul {
+          grid-template-columns: repeat(3, 1fr);
+          gap: 25px;
+
+          li {
+            &:last-child {
+              display: none;
+            }
+            .service_info {
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// MainService-mobile 종료

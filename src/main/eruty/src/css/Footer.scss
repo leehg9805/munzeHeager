@@ -1,0 +1,91 @@
+// footer-wep 시작
+.Footer {
+  padding: 60px 0 80px 0;
+  background: #f9f9f9;
+  .inner {
+    width: 1300px;
+    margin: 0 auto;
+    font-size: 13px;
+    text-align: center;
+
+    .footer_top {
+      font-weight: bold;
+      margin: 0 0 30px 0;
+
+      address {
+        line-height: 1.5;
+      }
+
+      .info {
+        line-height: 1.5;
+      }
+    }
+
+    .footer_bottom {
+      color: #a4a4a4;
+
+      .desc {
+        line-height: 1.5;
+        margin: 0 0 10px 0;
+      }
+      .warring {
+        line-height: 1.5;
+      }
+    }
+  }
+}
+//footer-wep 종료
+
+//footer-pad 시작
+@media (max-width: 1024px) {
+  .Footer {
+    padding: 60px 0 80px 0;
+
+    .inner {
+      width: auto;
+      padding: 0 30px;
+
+      .footer_top {
+        address {
+        }
+
+        .info {
+        }
+      }
+
+      .footer_bottom {
+        .desc {
+        }
+        .warring {
+        }
+      }
+    }
+  }
+}
+//footer-pad 종료
+
+//footer-mobile 시작
+@media (max-width: 768px) {
+  .Footer {
+    .inner {
+      padding: 0 15px;
+
+      .footer_top {
+        address {
+        }
+
+        .info {
+        }
+      }
+
+      .footer_bottom {
+        .desc {
+        }
+        .warring {
+        }
+      }
+    }
+  }
+}
+//footer-mobile 종료
+//footer 종료

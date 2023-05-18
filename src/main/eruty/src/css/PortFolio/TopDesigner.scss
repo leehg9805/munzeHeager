@@ -1,0 +1,220 @@
+//TopDesigner-wep 시작
+.TopDesigner {
+  padding: 100px 0;
+  background: #f9f9f9;
+  .inner {
+    width: 1300px;
+    margin: 0 auto;
+    .tit {
+      margin: 0 0 40px 0;
+      .main_tit {
+        display: flex;
+        align-items: center;
+        margin: 0 0 10px 0;
+        h2 {
+          position: relative;
+          font-size: 25px;
+          font-weight: 700;
+        }
+        a {
+          font-size: 25px;
+          color: #97cbd0;
+        }
+      }
+    }
+    .designer_wrap {
+      position: relative;
+      .DesignerSlide {
+        .designer {
+          padding: 0 15px;
+
+          .info {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin: 0 0 20px 0;
+            height: 60px;
+            figure {
+              display: flex;
+              align-items: center;
+              img {
+                width: 50px;
+              }
+            }
+            .desc {
+              .name {
+                h3 {
+                  font-size: 15px;
+                  font-weight: 500;
+                  margin: 0 0 2px 0;
+                }
+              }
+              .tag {
+                span {
+                  font-size: 13px;
+                  font-weight: normal;
+                  line-height: 1.3;
+                  margin: 0 5px 0 0;
+                  word-break: keep-all;
+                }
+              }
+            }
+          }
+          .product {
+            display: flex;
+            gap: 5px;
+            li {
+              flex: 1;
+              figure {
+                border-radius: 18px;
+                overflow: hidden;
+                img {
+                }
+              }
+            }
+          }
+        }
+      }
+      .arrows {
+        font-size: 40px;
+        cursor: pointer;
+        color: #97cbd0;
+        .slick_left {
+          position: absolute;
+          inset: 50% auto auto 0;
+          transform: translate(0, -50%);
+
+          padding: 5px;
+          border-radius: 50%;
+          background: #fff;
+          box-shadow: -1px 1px 1px #000;
+        }
+        .slick_right {
+          position: absolute;
+          inset: 50% 0 auto auto;
+          transform: translate(0, -50%);
+
+          padding: 5px;
+          border-radius: 50%;
+          background: #fff;
+          box-shadow: 1px 1px 1px #000;
+        }
+      }
+    }
+  }
+}
+//TopDesigner-wep 종료
+
+//TopDesigner-pad 시작
+@media (max-width: 1024px) {
+  .TopDesigner {
+    .inner {
+      width: auto;
+      padding: 0 15px;
+      .tit {
+        .main_tit {
+          h2 {
+          }
+          a {
+          }
+        }
+      }
+      .designer_wrap {
+        .DesignerSlide {
+          .designer {
+            .info {
+              figure {
+                img {
+                }
+              }
+              .desc {
+                .name {
+                  h3 {
+                  }
+                }
+                .tag {
+                  span {
+                  }
+                }
+              }
+            }
+            .product {
+              li {
+                figure {
+                  img {
+                  }
+                }
+              }
+            }
+          }
+        }
+        .arrows {
+          .slick_left {
+          }
+          .slick_right {
+          }
+        }
+      }
+    }
+  }
+}
+
+//TopDesigner-pad 종료
+//TopDesigner-mobile 시작
+@media (max-width: 768px) {
+  .TopDesigner {
+    .inner {
+      width: auto;
+      padding: 0 15px;
+      .tit {
+        .main_tit {
+          h2 {
+          }
+          a {
+          }
+        }
+        p {
+          font-size: 14px;
+          line-height: 1.3;
+        }
+      }
+      .designer_wrap {
+        .DesignerSlide {
+          .designer {
+            .info {
+              figure {
+                img {
+                }
+              }
+              .desc {
+                .name {
+                  h3 {
+                  }
+                }
+                .tag {
+                  span {
+                  }
+                }
+              }
+            }
+            .product {
+              li {
+                figure {
+                  img {
+                  }
+                }
+              }
+            }
+          }
+        }
+        .arrows {
+          .slick_left {
+          }
+          .slick_right {
+          }
+        }
+      }
+    }
+  }
+}
+//TopDesigner-mobile 종료

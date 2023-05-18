@@ -1,0 +1,35 @@
+//reset 시작
+@import url(./common.css);
+//reset 종료
+
+//Header 시작
+@import url(./Header.scss);
+//Header 종료
+
+//MainPage 시작
+@import url(./MainPage/MainPage.scss);
+//MainPage 종료
+
+//Footer 시작
+@import url(./Footer.scss);
+//Footer 종료
+
+//포트폴리오 페이지 시작
+@import url(./PortFolio/PortFolio.scss);
+//포트폴리오 페이지 종료
+
+//Login 시작
+@import url(./Login.scss);
+//Login 종료
+
+//SignUp 시작
+@import url(./SignUp.scss);
+//SignUp 종료
+
+//MyPage 시작
+@import url(./MyPage.scss);
+//MyPage 종료
+
+body {
+  min-width: 320px;
+}

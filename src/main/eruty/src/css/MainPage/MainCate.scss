@@ -1,0 +1,230 @@
+//MainCate 시작
+.MainCate {
+  padding: 100px 0;
+  background: #f9f9f9;
+
+  .inner {
+    width: 1300px;
+    margin: 0 auto;
+
+    .cate_content {
+      .tit {
+        margin: 0 0 10px 0;
+
+        h2 {
+          font-size: 18px;
+          font-weight: bold;
+        }
+      }
+
+      .tools {
+        background: #f0f0f0;
+        padding: 20px 40px;
+        border-radius: 28px;
+        margin: 0 0 30px 0;
+
+        .tool_list {
+          display: flex;
+          justify-content: center;
+          gap: 100px;
+
+          li {
+            font-size: 20px;
+            font-weight: 500;
+          }
+        }
+      }
+
+      .option {
+        background: rgb(0 0 0/15%);
+        padding: 20px 40px;
+        border-radius: 28px;
+        margin: 0 0 30px 0;
+
+        .option_list {
+          display: flex;
+          justify-content: center;
+          gap: 80px;
+
+          li {
+            font-size: 20px;
+            font-weight: 500;
+          }
+        }
+      }
+
+      .category {
+        background: #f0f0f0;
+        padding: 20px 40px;
+        border-radius: 28px;
+
+        .category_list {
+          display: grid;
+          grid-template-columns: repeat(7, 1fr);
+          gap: 30px 80px;
+          padding: 20px;
+          text-align: center;
+
+          li {
+            display: flex;
+            gap: 10px;
+            flex-direction: column;
+
+            a {
+              display: block;
+              color: #fff;
+              img {
+                width: 60px;
+                height: 60px;
+              }
+            }
+
+            span {
+              font-weight: 700;
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+//MainCate 종료
+
+//MainCate-pad 시작
+@media (max-width: 1024px) {
+  .MainCate {
+    .inner {
+      width: auto;
+      padding: 0 15px;
+      .cate_content {
+        width: auto;
+
+        .tit {
+          h2 {
+            font-size: 15px;
+          }
+        }
+
+        .tools {
+          background: rgb(0 0 0/15%);
+          gap: 80px;
+          .tool_list {
+            li {
+              font-size: 1.8vw;
+              font-weight: 700;
+            }
+          }
+        }
+
+        .option {
+          background: rgb(0 0 0/15%);
+
+          .option_list {
+            li {
+              font-size: 1.7vw;
+              font-weight: 700;
+            }
+          }
+        }
+
+        .category {
+          background: rgb(0 0 0/15%);
+
+          .category_list {
+            gap: 30px;
+            li {
+              display: flex;
+              margin: 0 auto;
+              gap: 10px;
+              flex-direction: column;
+              a {
+                img {
+                  width: 50px;
+                  height: 50px;
+                }
+              }
+
+              span {
+                font-weight: bold;
+                font-size: 1.6vw;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//MainCate-pad 종료
+
+//MainCate-mobile 시작
+@media (max-width: 768px) {
+  .MainCate {
+    .inner {
+      width: auto;
+      padding: 0 15px;
+      .cate_content {
+        width: auto;
+
+        .tit {
+          h2 {
+            font-size: 15px;
+          }
+        }
+
+        .tools {
+          background: rgb(0 0 0/15%);
+          gap: 80px;
+          .tool_list {
+            li {
+              font-size: 1.8vw;
+              font-weight: 700;
+            }
+          }
+          display: none;
+        }
+
+        .option {
+          background: rgb(0 0 0/15%);
+          display: none;
+          .option_list {
+            li {
+              font-size: 1.7vw;
+              font-weight: 700;
+            }
+          }
+        }
+
+        .category {
+          background: rgb(0 0 0/15%);
+          padding: 20px;
+
+          .category_list {
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px 10px;
+            li {
+              width: auto;
+              a {
+                display: flex;
+                align-items: center;
+                img {
+                  width: 40px;
+                  height: 40px;
+                }
+              }
+
+              span {
+                font-weight: bold;
+                font-size: 1.6vw;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//MainCate-mobile 종료

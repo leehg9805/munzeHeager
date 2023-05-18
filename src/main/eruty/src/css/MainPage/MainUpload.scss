@@ -1,0 +1,160 @@
+//MainUpload 시작
+.MainUpload {
+  padding: 100px 0;
+  background: #f9f9f9;
+
+  .inner {
+    width: 1300px;
+    margin: 0 auto;
+
+    .upload_content {
+      display: flex;
+      justify-content: center;
+      gap: 150px;
+      background: rgb(204 204 204 / 40%);
+      padding: 50px 20px;
+      border-radius: 30px;
+      text-align: center;
+
+      .tit {
+        h2 {
+          font-size: 15px;
+          font-weight: 700;
+          margin: 0 0 10px 0;
+        }
+
+        strong {
+          font-size: 20px;
+          font-weight: 700;
+        }
+      }
+
+      .upload_btn {
+        display: flex;
+        align-items: center;
+
+        span {
+          display: block;
+
+          a {
+            display: block;
+            background: #97cbd0;
+            color: #fff;
+            padding: 20px 35px;
+            border-radius: 28px;
+            font-size: 18px;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+}
+
+// MainUpload 종료
+
+// MainUpload-pad 시작
+@media (max-width: 1024px) {
+  .MainUpload {
+    .inner {
+      width: auto;
+      padding: 0 30px;
+
+      .upload_content {
+        display: flex;
+        justify-content: space-between;
+        gap: 0px;
+        width: auto;
+        padding: 50px 80px;
+
+        .tit {
+          h2 {
+            font-size: 1.6vw;
+          }
+
+          strong {
+            font-size: 2vw;
+            font-weight: 700;
+          }
+        }
+
+        .upload_btn {
+          display: flex;
+          align-items: center;
+
+          span {
+            display: block;
+
+            a {
+              border-radius: 28px;
+              font-size: 1.8vw;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// MainUpload-pad 종료
+
+// MainUpload-mobile 시작
+@media (max-width: 768px) {
+  .MainUpload {
+    .inner {
+      padding: 0 15px;
+
+      .upload_content {
+        display: flex;
+        justify-content: space-between;
+        gap: 0px;
+        padding: 50px 20px;
+
+        .tit {
+          h2 {
+            font-size: 14px;
+          }
+
+          strong {
+            font-size: 16px;
+          }
+        }
+
+        .upload_btn {
+          span {
+            a {
+              font-size: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 470px) {
+  .MainUpload {
+    .inner {
+      .upload_content {
+        flex-direction: column;
+        gap: 30px;
+
+        .tit {
+          h2 {
+          }
+
+          strong {
+          }
+        }
+
+        .upload_btn {
+          justify-content: center;
+          span {
+            a {
+              font-size: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// MainUpload-mobile 종료

@@ -1,0 +1,462 @@
+//CateView-wep 시작
+.CateView {
+  padding: 100px 0;
+  .inner {
+    width: 1300px;
+    margin: 0 auto;
+    .tit {
+      margin: 0 0 20px 0;
+      h2 {
+        font-size: 25px;
+        font-weight: 700;
+        margin: 0 0 10px 0;
+      }
+    }
+    .catelist_container {
+      margin: 0 0 100px 0;
+      .portfolio_catelist {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 10px;
+        li {
+          position: relative;
+          &.on::before {
+            content: "";
+            position: absolute;
+            inset: -4px;
+            border: 3px solid #97cbd0;
+            border-radius: 10px;
+          }
+
+          figure {
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+          h3 {
+            position: absolute;
+            inset: 50% auto auto 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+    .cateitm_container {
+      .tab_menu {
+        display: flex;
+        gap: 20px;
+        justify-content: flex-end;
+        padding: 0 10px;
+        font-size: 18px;
+        font-weight: 500;
+        margin: 0 0 20px 0;
+        li {
+          position: relative;
+          color: #b4a7a7;
+          &::before {
+            content: "";
+            position: absolute;
+            inset: 50% auto auto -10px;
+            transform: translate(0, -50%);
+            width: 4px;
+            height: 4px;
+            background: #97cbd0;
+            border-radius: 50%;
+            display: none;
+          }
+          &.on {
+            color: #333;
+            &::before {
+              display: block;
+            }
+          }
+          button {
+            background: none;
+            border: none;
+            cursor: pointer;
+          }
+        }
+      }
+      .portfolio_itm {
+        display: grid;
+        gap: 40px 10px;
+        grid-template-columns: repeat(5, 1fr);
+        .itm {
+          position: relative;
+          > i {
+            position: absolute;
+            inset: -5px 20% auto auto;
+            z-index: 999;
+            img {
+              width: 30px;
+            }
+          }
+          figure {
+            position: relative;
+            margin: 0 0 10px 0;
+
+            h3 {
+              position: absolute;
+              inset: auto 0 10px 0;
+              padding: 0 15px;
+              color: #fff;
+              font-weight: 500;
+              text-shadow: 0 0 3px #000;
+              line-height: 1.2;
+            }
+          }
+          .info {
+            display: flex;
+
+            justify-content: space-around;
+            .name {
+              display: flex;
+              gap: 5px;
+              align-items: center;
+              i {
+                img {
+                  width: 25px;
+                }
+              }
+              span {
+                font-size: 15px;
+              }
+            }
+            .view_like {
+              display: flex;
+              gap: 10px;
+              .view {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                i {
+                  display: flex;
+                  align-items: center;
+                  img {
+                    width: 15px;
+                  }
+                }
+                span {
+                  font-size: 15px;
+                }
+              }
+              .like {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                i {
+                  display: flex;
+                  align-items: center;
+                  img {
+                    width: 15px;
+                  }
+                }
+                span {
+                  font-size: 15px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+//CateView-wep 종료
+
+//CateView-pad 시작
+@media (max-width: 1024px) {
+  .CateView {
+    .inner {
+      width: auto;
+      padding: 0 15px;
+      .tit {
+        h2 {
+        }
+      }
+      .catelist_container {
+        .portfolio_catelist {
+          grid-template-columns: repeat(4, 1fr);
+          li {
+            &.on::before {
+              inset: -4px;
+            }
+
+            figure {
+              img {
+              }
+            }
+            h3 {
+            }
+          }
+        }
+      }
+      .cateitm_container {
+        .tab_menu {
+          li {
+            &::before {
+            }
+            &.on {
+              &::before {
+              }
+            }
+            button {
+            }
+          }
+        }
+        .portfolio_itm {
+          grid-template-columns: repeat(4, 1fr);
+          .itm {
+            > i {
+              img {
+              }
+            }
+            figure {
+              h3 {
+                text-align: center;
+                font-size: 1.8vw;
+              }
+            }
+            .info {
+              .name {
+                i {
+                  img {
+                  }
+                }
+                span {
+                  font-size: 1.5vw;
+                }
+              }
+              .view_like {
+                display: flex;
+                gap: 10px;
+                .view {
+                  display: flex;
+                  align-items: center;
+                  gap: 5px;
+                  i {
+                    img {
+                      width: 1.3vw;
+                    }
+                  }
+                  span {
+                    font-size: 1.7vw;
+                  }
+                }
+                .like {
+                  display: flex;
+                  align-items: center;
+                  gap: 5px;
+                  i {
+                    img {
+                      width: 1.3vw;
+                    }
+                  }
+                  span {
+                    font-size: 1.7vw;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+//CateView-pad 종료
+
+//CateView-mobile 시작
+@media (max-width: 768px) {
+  .CateView {
+    .inner {
+      width: auto;
+      padding: 0 15px;
+      .tit {
+        h2 {
+        }
+        p {
+          font-size: 14px;
+        }
+      }
+      .catelist_container {
+        .portfolio_catelist {
+          grid-template-columns: repeat(3, 1fr);
+          li {
+            &.on::before {
+              inset: -4px;
+            }
+
+            figure {
+              img {
+              }
+            }
+            h3 {
+            }
+          }
+        }
+      }
+      .cateitm_container {
+        .tab_menu {
+          li {
+            &::before {
+            }
+            &.on {
+              &::before {
+              }
+            }
+            button {
+              font-size: 2.5vw;
+            }
+          }
+        }
+        .portfolio_itm {
+          grid-template-columns: repeat(3, 1fr);
+          .itm {
+            > i {
+              img {
+              }
+            }
+            figure {
+              h3 {
+                font-size: 2.5vw;
+              }
+            }
+            .info {
+              .name {
+                i {
+                  img {
+                  }
+                }
+                span {
+                  font-size: 1.8vw;
+                }
+              }
+              .view_like {
+                .view {
+                  i {
+                    img {
+                      width: 1.5vw;
+                    }
+                  }
+                  span {
+                    font-size: 2vw;
+                  }
+                }
+                .like {
+                  i {
+                    img {
+                      width: 1.5vw;
+                    }
+                  }
+                  span {
+                    font-size: 2vw;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 500px) {
+  .CateView {
+    .inner {
+      width: auto;
+      padding: 0 15px;
+      .tit {
+        h2 {
+        }
+      }
+      .catelist_container {
+        .portfolio_catelist {
+          grid-template-columns: repeat(3, 1fr);
+          li {
+            &.on::before {
+            }
+
+            figure {
+              img {
+              }
+            }
+            h3 {
+              font-size: 3vw;
+            }
+          }
+        }
+      }
+      .cateitm_container {
+        .tab_menu {
+          li {
+            &::before {
+            }
+            &.on {
+              &::before {
+              }
+            }
+            button {
+              font-size: 3.5vw;
+            }
+          }
+        }
+        .portfolio_itm {
+          grid-template-columns: repeat(2, 1fr);
+          .itm {
+            > i {
+              img {
+                width: 6vw;
+              }
+            }
+            figure {
+              h3 {
+                font-size: 3.5vw;
+              }
+            }
+            .info {
+              .name {
+                i {
+                  img {
+                  }
+                }
+                span {
+                  font-size: 2.5vw;
+                }
+              }
+              .view_like {
+                .view {
+                  i {
+                    img {
+                      width: 2.5vw;
+                    }
+                  }
+                  span {
+                    font-size: 2.5vw;
+                  }
+                }
+                .like {
+                  display: flex;
+                  align-items: center;
+                  gap: 5px;
+                  i {
+                    img {
+                      width: 2.5vw;
+                    }
+                  }
+                  span {
+                    font-size: 2.5vw;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+//CateView-mobile 종료

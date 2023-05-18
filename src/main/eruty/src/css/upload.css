@@ -1,0 +1,48 @@
+.title {
+  margin-top: 20px;
+  text-align: center;
+}
+.contents {
+  display: flex;
+  margin-top: 30px;
+}
+.contents .upload-box {
+  width: 80%;
+  margin-left: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contents .upload-box .drag-file {
+  width: 100%;
+  height: 360px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 3px dashed #dbdbdb;
+}
+.contents .upload-box .drag-file.highlight {
+  border: 3px dashed rgb(36, 170, 225);
+}
+.contents .upload-box .drag-file .image {
+  width: 100px;
+}
+.contents .upload-box .drag-file .message {
+  margin-bottom: 0;
+}
+.contents .upload-box .file-label {
+  margin-top: 30px;
+  background-color: rgb(36, 170, 225);
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  width: 40%;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.contents .upload-box .file {
+  display: none;
+}

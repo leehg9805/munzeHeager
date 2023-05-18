@@ -1,0 +1,194 @@
+//MainInfo 시작
+
+.MainInfo {
+  position: relative;
+  padding: 100px 0;
+  width: 1300px;
+  margin: 0 auto;
+  background: url(../../../../resources/static/img/main_img/maininfo_bg01.svg)
+    no-repeat 10px center;
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 0 0;
+    background: url(../../../../resources/static/img/main_img/maininfo_bg02.svg)
+      no-repeat 60px -50px;
+  }
+
+  .inner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 1300px;
+    margin: 0 auto;
+    .content {
+      width: 1300px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      gap: 10px;
+      background: rgb(156 142 142 /30%);
+      padding: 20px;
+      border-radius: 30px;
+
+      #GltfLoader {
+        width: 350px;
+        height: 280px;
+
+        .itm {
+          width: 100%;
+          height: 100%;
+          scale: 1.5;
+        }
+      }
+
+      .desc {
+        text-align: right;
+
+        p {
+          font-size: 13px;
+          font-weight: 700;
+          line-height: 1.3;
+          margin: 0 0 5px 0;
+        }
+        h2 {
+          font-size: 25px;
+          font-weight: 700;
+          line-height: 1.3;
+          margin: 0 0 20px 0;
+        }
+        span {
+          display: block;
+          a {
+            display: inline-block;
+            padding: 15px 25px;
+            border-radius: 25px;
+            background: #97cbd0;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+
+//MainInfo 종료
+
+//MainInfo-pad 시작
+@media (max-width: 1024px) {
+  .MainInfo {
+    background: none;
+    width: auto;
+    margin: none;
+    .inner {
+      width: auto;
+      padding: 0 30px;
+
+      .content {
+        width: 100%;
+        height: 300px;
+        justify-content: space-around;
+        align-items: center;
+        gap: 0px;
+        padding: 30px 50px;
+        border-radius: 40px;
+
+        #GltfLoader {
+          position: unset;
+          width: 30%;
+          height: 150%;
+          .itm {
+            scale: 1;
+          }
+        }
+
+        figure {
+          display: none;
+        }
+
+        .desc {
+          width: 70%;
+
+          h2 {
+            font-size: 3.5vw;
+          }
+
+          p {
+            font-size: 1.7vw;
+          }
+        }
+      }
+    }
+  }
+}
+
+//MainInfo-pad 종료
+
+//MainInfo-mobile시작
+@media (max-width: 768px) {
+  .MainInfo {
+    .inner {
+      padding: 0 15px;
+
+      .content {
+        gap: 0px;
+
+        #GltfLoader {
+          width: 40%;
+          height: 320px;
+        }
+
+        figure {
+          display: none;
+        }
+
+        .desc {
+          width: 60%;
+          h2 {
+            font-size: 20px;
+          }
+
+          p {
+            font-size: 1.7vw;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .MainInfo {
+    .inner {
+      width: auto;
+      padding: 0 15px;
+      .content {
+        width: 100%;
+        height: auto;
+        gap: 0px;
+        padding: 20px 0;
+        flex-direction: column;
+        border-radius: 20px;
+
+        #GltfLoader {
+          width: 100%;
+          height: 320px;
+        }
+
+        .desc {
+          width: 100%;
+          text-align: center;
+          h2 {
+            font-size: 20px;
+          }
+
+          p {
+            font-size: 11px;
+          }
+        }
+      }
+    }
+  }
+}
+//MainInfo-mobile종료

@@ -1,0 +1,413 @@
+// header 시작
+
+.Header {
+  line-height: 100px;
+  .inner {
+    display: flex;
+    justify-content: space-between;
+    width: 1300px;
+    margin: 0 auto;
+
+    .head_left {
+      display: flex;
+      gap: 30px;
+
+      h1 {
+        font-size: 20px;
+        a {
+          img {
+            width: 30px;
+            height: 40px;
+          }
+        }
+      }
+
+      ul {
+        display: flex;
+        gap: 15px;
+        li {
+          a {
+            font-size: 18px;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+
+    .head_center {
+      width: 700px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .search {
+        position: relative;
+        display: flex;
+        align-items: center;
+        border: 1px solid #97cbd0;
+        height: 50px;
+        border-radius: 25px;
+
+        .search_word {
+          position: absolute;
+          inset: auto auto -10px 0;
+          transform: translate(0, 100%);
+          display: flex;
+          gap: 10px;
+          line-height: 1;
+
+          span {
+            background: #f0f0f0;
+            border-radius: 14px;
+
+            a {
+              display: block;
+              padding: 7px 15px 7px 15px;
+              line-height: 1;
+              font-size: 14px;
+              font-weight: 700;
+            }
+          }
+        }
+      }
+
+      form {
+        display: flex;
+        gap: 30px;
+        padding: 0 20px;
+
+        input {
+          width: 500px;
+          border: none;
+          background: none;
+          outline: none;
+        }
+
+        button {
+          border: none;
+          background: none;
+          cursor: pointer;
+          i {
+            img {
+              width: 20px;
+            }
+          }
+        }
+      }
+      .m_open {
+        position: relative;
+        font-size: 0;
+        cursor: pointer;
+        width: 30px;
+        height: 40px;
+        display: none;
+
+        &::before,
+        &::after {
+          position: absolute;
+          content: "";
+          inset: 50% auto auto 50%;
+          transform: translate(-50%, -50%);
+          width: 30px;
+          height: 2px;
+          background: #97cbd0;
+        }
+        &.on::before {
+          transform: translate(-50%, -50%) rotate(45deg);
+        }
+        &.on::after {
+          transform: translate(-50%, -50%) rotate(-45deg);
+        }
+        button {
+          &::before {
+            content: "";
+            position: absolute;
+            inset: 7px auto auto 50%;
+            transform: translate(-50%, 0);
+            width: 30px;
+            height: 2px;
+            background: #97cbd0;
+          }
+          &::after {
+            content: "";
+            position: absolute;
+            inset: auto auto 7px 50%;
+            transform: translate(-50%, 0);
+            width: 30px;
+            height: 2px;
+            background: #97cbd0;
+          }
+        }
+        &.on {
+          button {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .head_right {
+      display: flex;
+      gap: 30px;
+
+      .member {
+        display: flex;
+        gap: 15px;
+
+        li {
+          font-size: 14px;
+          font-weight: 700;
+        }
+      }
+
+      .icon_menu {
+        display: flex;
+        gap: 20px;
+        li {
+          a {
+            i {
+              img {
+                width: 20px;
+              }
+            }
+          }
+        }
+      }
+      .mobile_menu {
+        display: none;
+      }
+    }
+  }
+}
+
+// header 종료
+
+// header-pad 시작
+
+@media (max-width: 1024px) {
+  .Header {
+    line-height: 80px;
+
+    .inner {
+      gap: 0 30px;
+      flex-wrap: wrap;
+      width: auto;
+      margin: 0 auto;
+      padding: 0 15px;
+
+      .head_left {
+        width: 100%;
+
+        ul {
+          li {
+            a {
+              font-size: 16px;
+              font-weight: 700;
+            }
+          }
+        }
+      }
+
+      .head_center {
+        width: 100%;
+        display: flex;
+        justify-content: unset;
+        align-items: center;
+        gap: 10px;
+        i {
+        }
+
+        .search {
+          flex: 8;
+          position: relative;
+
+          .search_word {
+            position: absolute;
+            inset: auto auto -10px 0;
+            transform: translate(0, 100%);
+            display: flex;
+            gap: 10px;
+            line-height: 1;
+            span {
+              a {
+                font-size: 13px;
+              }
+            }
+          }
+        }
+
+        form {
+          display: flex;
+          width: 100%;
+          justify-content: space-between;
+          gap: 30px;
+          padding: 0 20px;
+
+          input {
+            width: 80%;
+
+            border: none;
+            background: none;
+            outline: none;
+          }
+
+          button {
+            border: none;
+            background: none;
+            cursor: pointer;
+          }
+        }
+        .m_open {
+          display: block;
+        }
+      }
+
+      .head_right {
+        position: fixed;
+        inset: 0 auto auto -100%;
+        text-align: center;
+
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 0px;
+
+        width: calc(70%);
+        height: 100%;
+        line-height: 40px;
+
+        background: #fff;
+        z-index: 2999;
+        transition: 0.5s;
+
+        box-shadow: 0px 0px 12px 1px;
+        &.on {
+          inset: 0 auto auto 0;
+        }
+        // &::before {
+        //     content: "";
+        //     position: absolute;
+        //     inset: 0 auto 0 100%;
+        //     width: 200%;
+        //     visibility: hidden;
+        //     opacity: 0;
+
+        //     background: rgba(0,0,0,0.8)
+        // }
+
+        // &.on::before {
+        //     visibility: visible;
+        //     opacity: 1;
+        // }
+
+        .member {
+          display: flex;
+          flex-direction: column;
+          gap: 0px;
+        }
+      }
+    }
+  }
+}
+// header-pad 종료
+
+// header-mobile 시작
+@media (max-width: 768px) {
+  .Header {
+    .inner {
+      gap: 0 10px;
+      flex-wrap: wrap;
+      justify-content: unset;
+
+      .head_left {
+        width: auto;
+
+        h1 {
+          width: 100%;
+        }
+        .web_menu {
+          display: none;
+        }
+      }
+
+      .head_center {
+        width: auto;
+        flex: 9.5;
+        i {
+          display: none;
+        }
+
+        .search {
+          font-size: 3vw;
+
+          .search_word {
+            flex-wrap: wrap;
+            line-height: 1;
+            span {
+              a {
+                font-size: 1vw;
+              }
+            }
+          }
+        }
+
+        form {
+          display: flex;
+          width: 100%;
+          justify-content: space-between;
+          gap: 30px;
+          padding: 0 20px;
+
+          input {
+            width: 80%;
+
+            border: none;
+            background: none;
+            outline: none;
+          }
+
+          button {
+            border: none;
+            background: none;
+            cursor: pointer;
+          }
+        }
+        .m_open {
+          display: block;
+        }
+      }
+
+      .head_right {
+        &.on {
+        }
+        // &::before {
+        //   content: "";
+        //   position: absolute;
+        //   inset: 0 auto 0 100%;
+        //   width: 200%;
+        //   visibility: hidden;
+        //   opacity: 0;
+
+        //   background: rgba(0, 0, 0, 0.8);
+        // }
+
+        // &.on::before {
+        //   visibility: visible;
+        //   opacity: 1;
+        // }
+
+        .member {
+          li {
+          }
+        }
+        .icon_menu {
+          padding: 20px 0;
+        }
+        .mobile_menu {
+          display: block;
+        }
+      }
+    }
+  }
+}
+// header-mobile 종료

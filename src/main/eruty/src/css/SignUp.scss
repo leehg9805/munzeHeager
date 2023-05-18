@@ -1,0 +1,70 @@
+// SignUp 시작
+.SignUp {
+  display: none;
+  position: absolute;
+  inset: 0 0 0 0;
+  background: #fff;
+  z-index: 3999;
+  padding: 50px 0;
+  justify-content: center;
+  &.on {
+    display: flex;
+  }
+  .inner {
+    width: 450px;
+    min-width: 320px;
+    padding: 0 30px;
+    .tit {
+      width: 100%;
+      margin: 0 0 20px 0;
+      text-align: center;
+      a {
+        img {
+          width: 250px;
+        }
+      }
+    }
+    .signup_container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px 0;
+      .sub_tit {
+        margin: 0 0 5px 0;
+        font-size: 18px;
+        font-weight: 700;
+      }
+      input {
+        width: 100%;
+        padding: 8px 10px;
+      }
+      .marketing {
+        input {
+          width: auto;
+        }
+        .mark_yes,
+        .mark_no {
+          display: flex;
+          gap: 5px;
+        }
+      }
+      .signup_btn {
+        width: 100%;
+        cursor: pointer;
+        padding: 10px 20px;
+        margin: 0 0 100px 0;
+        border: none;
+        background: #333;
+        font-size: 20px;
+        font-weight: 900;
+        color: #fff;
+
+        transition: 0.3s;
+        &:hover {
+          background: #97cbd0;
+        }
+      }
+    }
+  }
+}
+// SignUp 종료

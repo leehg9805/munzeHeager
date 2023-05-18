@@ -1,0 +1,84 @@
+.PortFolioDetail {
+  position: fixed;
+  inset: 0 0 0 0;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 2999;
+  // display: none;
+  // &.on {
+  //   display: block;
+  // }
+  .inner {
+    width: 1000px;
+    height: 100%;
+    overflow: auto;
+    margin: 0 auto;
+    padding: 50px;
+    background: #fff;
+    .info {
+      .detail_main {
+        .main_info {
+          display: flex;
+          gap: 20px;
+          align-items: center;
+          .profile_img {
+            figure {
+              img {
+                width: 50px;
+              }
+            }
+          }
+          .tit {
+            h2 {
+              font-size: 18px;
+              font-weight: 700;
+              margin: 0 0 10px 0;
+            }
+
+            .sub_tit {
+              display: flex;
+              align-items: center;
+              gap: 30px;
+              .date {
+                font-size: 14px;
+              }
+              .view_like {
+                display: flex;
+                gap: 10px;
+                .view {
+                  display: flex;
+                  gap: 2px;
+                  i {
+                    display: flex;
+                    align-items: center;
+                    img {
+                      width: 20px;
+                    }
+                  }
+                }
+                .like {
+                  display: flex;
+                  gap: 2px;
+                  i {
+                    display: flex;
+                    align-items: center;
+                    img {
+                      width: 15px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+          .link {
+            display: flex;
+            button {
+              img {
+                width: 30px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

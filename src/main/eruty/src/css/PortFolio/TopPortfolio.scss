@@ -1,0 +1,314 @@
+//TopPortfolio 웹 시작
+.TopPortfolio {
+  padding: 100px 0;
+  .inner {
+    width: 1300px;
+    margin: 0 auto;
+    .tit {
+      display: flex;
+      align-items: center;
+      margin: 0 0 20px 0;
+      h2 {
+        display: inline-block;
+        position: relative;
+        font-size: 25px;
+        font-weight: 700;
+      }
+      a {
+        color: #97cbd0;
+        font-size: 25px;
+      }
+    }
+    .slide_wrap {
+      position: relative;
+
+      .PortfolioSlide {
+        .itm {
+          position: relative;
+          padding: 5px 15px;
+          > i {
+            position: absolute;
+            inset: 0px 20% auto auto;
+            img {
+              width: 30px;
+            }
+          }
+          figure {
+            position: relative;
+            margin: 0 0 10px 0;
+
+            h3 {
+              position: absolute;
+              inset: auto 0 10px 0;
+              padding: 0 15px;
+              color: #fff;
+              font-weight: 500;
+              text-shadow: 0 0 3px #000;
+            }
+          }
+          .info {
+            display: flex;
+
+            justify-content: space-around;
+            .name {
+              display: flex;
+              gap: 5px;
+              align-items: center;
+              i {
+                img {
+                  width: 25px;
+                }
+              }
+              span {
+                font-size: 15px;
+              }
+            }
+            .view_like {
+              display: flex;
+              gap: 10px;
+              .view {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                i {
+                  img {
+                    width: 15px;
+                  }
+                }
+                span {
+                  font-size: 15px;
+                }
+              }
+              .like {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                i {
+                  img {
+                    width: 15px;
+                  }
+                }
+                span {
+                  font-size: 15px;
+                }
+              }
+            }
+          }
+        }
+      }
+      .arrows {
+        font-size: 50px;
+        cursor: pointer;
+        color: #97cbd0;
+        .slick_left {
+          position: absolute;
+          inset: 50% auto auto 0;
+          transform: translate(0, -50%);
+
+          padding: 5px;
+          border-radius: 50%;
+          background: #fff;
+          box-shadow: -1px 1px 1px #000;
+        }
+        .slick_right {
+          position: absolute;
+          inset: 50% 0 auto auto;
+          transform: translate(0, -50%);
+
+          padding: 5px;
+          border-radius: 50%;
+          background: #fff;
+          box-shadow: 1px 1px 1px #000;
+        }
+      }
+    }
+  }
+}
+//TopPortfolio-wep 종료
+
+//TopPortfolio-pad 시작
+@media (max-width: 1024px) {
+  .TopPortfolio {
+    .inner {
+      width: auto;
+      padding: 0 15px;
+      .tit {
+        h2 {
+          font-size: 25px;
+          font-weight: 700;
+        }
+        a {
+        }
+      }
+      .slide_wrap {
+        position: relative;
+
+        .PortfolioSlide {
+          .itm {
+            position: relative;
+            padding: 5px 15px;
+            > i {
+              img {
+                width: 25px;
+              }
+            }
+            figure {
+              h3 {
+                inset: auto 0 10px 50%;
+                transform: translate(-50%, 0);
+                width: 100%;
+                padding: 0 5px;
+                text-align: center;
+                font-size: 1.8vw;
+              }
+            }
+            .info {
+              .name {
+                i {
+                  img {
+                  }
+                }
+                span {
+                }
+              }
+              .view_like {
+                .view {
+                  i {
+                    img {
+                    }
+                  }
+                  span {
+                  }
+                }
+                .like {
+                  i {
+                    img {
+                    }
+                  }
+                  span {
+                  }
+                }
+              }
+            }
+          }
+        }
+        .arrows {
+          .slick_left {
+            position: absolute;
+            inset: 50% auto auto 0;
+            transform: translate(0, -50%);
+            padding: 5px;
+          }
+          .slick_right {
+            position: absolute;
+            inset: 50% 0 auto auto;
+            transform: translate(0, -50%);
+            padding: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+//TopPortfolio-pad 종료
+
+//TopPortfolio-mobile 시작
+@media (max-width: 768px) {
+  .TopPortfolio {
+    .inner {
+      width: auto;
+      padding: 0 15px;
+      .tit {
+        h2 {
+        }
+        a {
+        }
+      }
+      .slide_wrap {
+        position: relative;
+
+        .PortfolioSlide {
+          .itm {
+            position: relative;
+            padding: 5px 15px;
+            > i {
+              img {
+                width: 30px;
+              }
+            }
+            figure {
+              h3 {
+                inset: auto 0 10px 50%;
+                transform: translate(-50%, 0);
+                width: 100%;
+                padding: 0 5px;
+                text-align: center;
+                font-size: 3vw;
+              }
+            }
+            .info {
+              .name {
+                i {
+                  img {
+                  }
+                }
+                span {
+                }
+              }
+              .view_like {
+                .view {
+                  i {
+                    img {
+                    }
+                  }
+                  span {
+                  }
+                }
+                .like {
+                  i {
+                    img {
+                    }
+                  }
+                  span {
+                  }
+                }
+              }
+            }
+          }
+        }
+        .arrows {
+          .slick_left {
+            position: absolute;
+            inset: 50% auto auto 0;
+            transform: translate(0, -50%);
+            padding: 5px;
+          }
+          .slick_right {
+            position: absolute;
+            inset: 50% 0 auto auto;
+            transform: translate(0, -50%);
+            padding: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 500px) {
+  .TopPortfolio {
+    .inner {
+      .slide_wrap {
+        .PortfolioSlide {
+          .itm {
+            figure {
+              h3 {
+                font-size: 4.5vw;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+//TopPortfolio-mobile 종료
